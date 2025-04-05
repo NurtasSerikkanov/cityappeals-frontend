@@ -1,0 +1,150 @@
+.dashboard {
+  padding: 2rem;
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #111827;
+  }
+
+  .subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .statsContainer {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+
+    .statCard {
+      flex: 1;
+      min-width: 240px;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 6px 0 12px rgba(0, 0, 0, 0.05);
+      position: relative;
+      border-left: 4px solid transparent;
+      transition: 0.2s ease-in-out;
+
+      p {
+        color: #4B5563;
+        font-size: 0.95rem;
+        margin-bottom: 0.3rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        color: #111827;
+        font-weight: 700;
+      }
+
+      .statSub {
+        font-size: 0.85rem;
+        margin-top: 0.4rem;
+        display: block;
+        color: #6B7280;
+      }
+
+      .icon {
+        position: absolute;
+        top: 1.2rem;
+        right: 1.2rem;
+        width: 22px;
+        height: 22px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    .blue {
+      border-left-color: #3B82F6;
+    }
+
+    .green {
+      border-left-color: #10B981;
+    }
+
+    .red {
+      border-left-color: #EF4444;
+    }
+  }
+
+  .graphSection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .barChart,
+    .pieChart {
+      flex: 1 1 45%;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        color: #111827;
+      }
+    }
+  }
+}
+
+.yearSelector {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+  button {
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #f3f4f6;
+    cursor: pointer;
+    font-weight: 500;
+    color: #111827;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #e5e7eb;
+    }
+  }
+
+  .yearButtonActive {
+    background-color: #ede9fe;
+    font-weight: 700;
+    color: #4f46e5;
+  }
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.legendColor {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}

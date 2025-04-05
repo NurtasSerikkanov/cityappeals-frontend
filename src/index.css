@@ -1,0 +1,14 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: #213547;
+}
