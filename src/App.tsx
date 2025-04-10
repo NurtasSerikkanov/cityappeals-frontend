@@ -5,6 +5,7 @@ import MapPage from './pages/Map/MapPage';
 import AppealsPage from './pages/AppealsPAge/AppealsPage';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import DistrictsMap from './pages/DistrictsMap/DistrictsMap';
+import AboutPage from "./pages/AboutPage/AboutPage";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                     <Route path="/map" element={<MapPage />} />
                     <Route path="/appeals" element={<AppealsPage />} />
                     <Route path="/districts-map" element={<DistrictsMap />} />
+                    <Route path="/about" element={<AboutPage/>} />
                 </Routes>
             </MainLayout>
         </Router>

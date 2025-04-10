@@ -34,11 +34,14 @@ const DistrictsMap = () => {
     };
 
     useEffect(() => {
+        setDistricts([]);
+
         getDistrictPolygons(filters.year, filters.month).then(res => {
             setDistricts(res.data);
-            setLayerIds(res.data.map((_: any, i: number) => `district-layer-${i}`));
+            setLayerIds(res.data.map((_, i) => `district-layer-${i}`));
         });
     }, [filters]);
+
 
     const colors = ['#F87171', '#60A5FA', '#34D399', '#FBBF24', '#A78BFA', '#FB7185', '#FCD34D'];
 
@@ -101,7 +104,7 @@ const DistrictsMap = () => {
             >
                 {districts.map((d, i) => (
                     <Source
-                        key={d.name}
+                        key={`${d.name}-${filters.year}-${filters.month}`}
                         id={`source-${i}`}
                         type="geojson"
                         data={{
@@ -120,6 +123,7 @@ const DistrictsMap = () => {
                         />
                     </Source>
                 ))}
+
 
                 {popupInfo && (
                     <Popup
